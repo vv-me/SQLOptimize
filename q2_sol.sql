@@ -11,7 +11,7 @@ SET @v7 = 'EE';
 SET @v8 = 'MAT';
 
 -- 2. List the names of students with id in the range of v2 (id) to v3 (inclusive).
-SELECT name FROM Student WHERE id BETWEEN @v2 AND @v3;
+SELECT name FROM Student WHERE id >= @v2 AND id <= @v3;
 
 #CREATE INDEX IX_Student_id ON Student (id, name) 
 #DROP INDEX IX_Student_id ON Student
